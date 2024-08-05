@@ -55,6 +55,7 @@ const NoteItem = ({ dark,note, index }) => {
           isOpen={isEditing}
           onRequestClose={closeEditModal}
           note={note}
+          dark={dark}
         />
       )}
     </div>
