@@ -22,7 +22,7 @@ const NoteForm = ({ dark,isOpen,  onRequestClose}) => {
   };
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onRequestClose} className={`mt-[118px] ml-[450px] flex flex-col items-center rounded-[16px] justify-center shadow-md w-[500px] h-[289px] bg- ${dark?"bg-[black]":"bg-[#F7F7F7]"}`}>
+    <Modal isOpen={isOpen} onRequestClose={onRequestClose} className={`mt-[118px] ml-3 md:ml-[450px] flex flex-col items-center rounded-[16px] justify-center shadow-md w-[300px] md:w-[500px] h-[289px] bg- ${dark?"bg-[black]":"bg-[#F7F7F7]"}`}>
       <div className='flex items-center justify-center'>
         <h2 className={`text-[26px] font-[500] leading-[38.87px] h-[39px] w-[135px] ${dark?"text-white":"text-[#252525]"}`}>NEW NOTE</h2>
       </div>
@@ -32,9 +32,9 @@ const NoteForm = ({ dark,isOpen,  onRequestClose}) => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Input your note..."
-          className={`w-[400px] h-[38px] px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out mb-2 ${dark?"bg-black text-gray-300":"bg-white"}`}
+          className={`w-auto md:w-[400px] h-[38px] px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:border-blue-500 transition duration-300 ease-in-out mb-2 ${dark?"bg-black text-gray-300":"bg-white"}`}
         />
-        <div className='flex justify-between mt-[24]'>
+        <div className='flex justify-between mt-[24] gap-4 md:gap-0'>
           <button type="submit" onClick={handleCancel} className={`w-[110px] h-[38px] rounded-[5px] border-[1px] border-[#6C63FF] mt-2 px-4 py-2  text-[#6C63FF] shadow-sm hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300 ease-in-out ${dark?"bg-black":"bg-white"}`}>
             Cancel
           </button>
