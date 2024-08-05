@@ -14,7 +14,7 @@ const Home = () => {
 
   return (
     <div className={`min-h-screen w-auto md:w-screen p-8 ${dark?"bg-black":"bg-white"}`}>
-      <div className='-ml-[60px] flex items-center justify-center'>
+      <div className=' flex items-center justify-center'>
         <h2 className={`text-[26px] font-[500] leading-[38.87px] text-[#252525] h-[39px] w-[130px] ${dark?"text-gray-100":"text-[#252525]"}`}>TODO LIST</h2>
       </div>
       {/* Your NoteList component */}

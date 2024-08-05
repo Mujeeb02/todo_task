@@ -26,7 +26,7 @@ const NoteItem = ({ dark,note, index }) => {
   };
 
   return (
-    <div className={`-ml-16 md:ml-0 w-auto md:w-[525px] h-[26px] rounded-lg p-4 mb-4 flex flex-row justify-between items-center gap-8 ${dark?"bg-black":"bg-white"}`}>
+    <div className={`md:ml-0 w-[320px] md:w-[525px] h-[26px] rounded-lg p-4 mb-4 flex flex-row justify-between items-center gap-8 ${dark?"bg-black":"bg-white"}`}>
       <div className="flex justify-center items-start gap-4">
         <div>
           <input
@@ -56,6 +56,7 @@ const NoteItem = ({ dark,note, index }) => {
           onRequestClose={closeEditModal}
           note={note}
           dark={dark}
+          index={index}
         />
       )}
     </div>

@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import { useDispatch } from 'react-redux';
 import { editNote } from '../store/actions/noteAction';
 
-const EditNoteModal = ({ dark, isOpen, onRequestClose, note }) => {
+const EditNoteModal = ({ dark, isOpen, onRequestClose, note,index }) => {
   const [newTitle, setNewTitle] = useState(note.title);
   const [newDescription, setNewDescription] = useState(note.description);
   const dispatch = useDispatch();
@@ -19,10 +19,17 @@ const EditNoteModal = ({ dark, isOpen, onRequestClose, note }) => {
     setNewTitle(note.title);
     setNewDescription(note.description);
   };
-
+  let marginTop=0;
+  if(index<2){
+    marginTop=200+(index+1)*38;
+  }
+  else{
+    marginTop=276+(index+1)*38;
+  }
+  console.log(marginTop)
   return (
-    <Modal isOpen={isOpen} onRequestClose={onRequestClose} className={`flex items-center justify-center  mt-[200px] -ml-[70px] md:ml-[40px]`}>
-      <div className={`w-auto p-6 rounded-md shadow-lg md:w-full max-w-md ${dark ? "bg-black" : "bg-white"}`}>
+    <Modal  isOpen={isOpen} onRequestClose={onRequestClose} className={`flex items-center justify-center -ml-2 md:ml-[40px]`}>
+      <div style={{ marginTop: `${marginTop}px` }} className={`w-auto p-6 rounded-md shadow-lg md:w-full max-w-md ${dark ? "bg-black" : "bg-white"}`}>
         <h2 className={`text-2xl font-bold mb-4 pl-[35%] ${dark?"text-gray-300":"text-black"}`}>Edit Note</h2>
         <input
           type="text"
