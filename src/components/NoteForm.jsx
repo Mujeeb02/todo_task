@@ -22,7 +22,7 @@ const NoteForm = ({ dark,isOpen,  onRequestClose}) => {
   };
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={onRequestClose} className={`mt-[118px] ml-[12%] md:ml-[450px] flex flex-col items-center rounded-[16px] justify-center shadow-md w-[300px] md:w-[500px] h-[289px] bg- ${dark?"bg-[black]":"bg-[#F7F7F7]"}`}>
+    <Modal isOpen={isOpen} onRequestClose={onRequestClose} className={`mt-[118px] ml-[50%] -translate-x-[50%] flex flex-col items-center rounded-[16px] justify-center shadow-md w-[300px] md:w-[500px] h-[289px] bg- ${dark?"bg-[black]":"bg-[#F7F7F7]"}`}>
       <div className='flex items-center justify-center'>
         <h2 className={`text-[26px] font-[500] leading-[38.87px] h-[39px] w-[135px] ${dark?"text-white":"text-[#252525]"}`}>NEW NOTE</h2>
       </div>

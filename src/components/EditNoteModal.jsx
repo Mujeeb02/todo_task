@@ -19,13 +19,7 @@ const EditNoteModal = ({ dark, isOpen, onRequestClose, note,index }) => {
     setNewTitle(note.title);
     setNewDescription(note.description);
   };
-  let marginTop=0;
-  if(index<2){
-    marginTop=200+(index+1)*38;
-  }
-  else{
-    marginTop=276+(index+1)*38;
-  }
+  const marginTop = index < 2 ? 200 + (index + 1) * 38 : 276 + (index + 1) * 38;
   console.log(marginTop)
   return (
     <Modal  isOpen={isOpen} onRequestClose={onRequestClose} className={`flex items-center justify-center -ml-2 md:ml-[40px]`}>
